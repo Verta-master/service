@@ -1,0 +1,41 @@
+.discount {
+  padding-top: 45px;
+  padding-bottom: 45px;
+  color: #fff;
+  background-color: #21282f;
+  
+  .title {
+    color: #fff;
+    
+    &::before {
+      display: none;
+    }
+  }
+}
+.discount__wrap {
+  display: flex;
+}
+.discount__info {
+  width: ~"calc(100% - 565px)";
+}
+.discount__img {
+  width: 550px;
+  height: 490px;
+  overflow: hidden;
+  
+  img {
+    display: block;
+  }
+}
+.discount__text {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  
+  span {
+    color: @yellow;
+  }
+}
+.discount__btn {
+  margin-top: 70px;
+}
