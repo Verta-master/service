@@ -469,6 +469,31 @@ button {
   letter-spacing: 0.01em;
   font-weight: 500;
 }
+blockquote {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  padding: 45px 35px;
+  font-size: 22px;
+  font-weight: 300;
+  letter-spacing: 0.01em;
+  font-style: italic;
+  border-radius: 5px;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0px 25px 57px 0px rgba(35, 42, 49, 0.1);
+          box-shadow: 0px 25px 57px 0px rgba(35, 42, 49, 0.1);
+}
+blockquote::before {
+  content: "";
+  position: absolute;
+  top: -45px;
+  left: -30px;
+  width: 96px;
+  height: 96px;
+  background-image: url(../img/icons/quote.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
 .btn {
   width: 270px;
   height: 56px;
@@ -522,7 +547,7 @@ button {
           justify-content: space-between;
 }
 .price__info {
-  max-width: 750px;
+  width: calc(100% - 438px);
 }
 .price__info p {
   margin-bottom: 30px;
@@ -734,6 +759,10 @@ button {
 .course__column {
   width: 48%;
 }
+.course__column:first-of-type .course__block:nth-child(2n),
+.course__column:last-of-type .course__block:nth-child(2n + 1) {
+  background-color: rgba(242, 251, 255, 0.502);
+}
 .course__block {
   width: 100%;
   padding: 45px 50px;
@@ -745,8 +774,152 @@ button {
 }
 .course__block .title {
   margin-top: 0;
+  margin-bottom: 70px;
   text-align: center;
 }
 .course__block .title::before {
   display: none;
+}
+.course__block table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 24px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+.course__block table td {
+  width: 50%;
+  height: 95px;
+  vertical-align: middle;
+}
+.course__block table td:first-child {
+  opacity: 0.3;
+  padding-right: 40px;
+}
+.course__block table td:last-child span {
+  color: #ffc102;
+}
+.lessons {
+  margin-bottom: 140px;
+}
+.lessons__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-top: 110px;
+}
+.lessons__item {
+  width: 315px;
+  max-width: 100%;
+  margin-bottom: 90px;
+  position: relative;
+  padding-top: 80px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  text-align: center;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: 52px 52px;
+}
+.lessons__item:first-child {
+  background-image: url(../img/icons/chemistry.svg);
+}
+.lessons__item:nth-child(2) {
+  background-image: url(../img/icons/leather.svg);
+}
+.lessons__item:nth-child(3) {
+  background-image: url(../img/icons/car.svg);
+}
+.lessons__item:nth-child(4) {
+  background-image: url(../img/icons/graduation-cap.svg);
+}
+.lessons__item:nth-child(5) {
+  background-image: url(../img/icons/stones.svg);
+}
+.lessons__item:nth-child(6) {
+  background-image: url(../img/icons/rain.svg);
+}
+.lessons__item:nth-child(7) {
+  width: 420px;
+  background-image: url(../img/icons/shield.svg);
+}
+.lessons__item:nth-child(8) {
+  background-image: url(../img/icons/wash.svg);
+}
+.result {
+  margin-bottom: 140px;
+}
+.result__wrap {
+  margin-top: 80px;
+  margin-bottom: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.result__column {
+  width: 48%;
+}
+.result__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.result__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 260px;
+  margin-bottom: 60px;
+  padding: 30px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  border-radius: 5px;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0px 25px 57px 0px rgba(35, 42, 49, 0.1);
+          box-shadow: 0px 25px 57px 0px rgba(35, 42, 49, 0.1);
+}
+.result__title {
+  margin-top: 0;
+  margin-bottom: 35px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+.connect {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-color: #f2fbff;
+}
+.connect__wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.connect__info {
+  width: calc(100% - 438px);
+  padding-right: 25px;
+  font-size: 30px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+.connect__text {
+  max-width: 650px;
 }
