@@ -10,6 +10,11 @@
 }
 .course__column {
   width: 48%;
+  
+  &:first-of-type .course__block:nth-child(2n),
+  &:last-of-type .course__block:nth-child(2n + 1) {
+    background-color: rgba(242, 251, 255, 0.502);
+  }
 }
 .course__block {
   width: 100%;
@@ -21,10 +26,34 @@
   
   .title {
     margin-top: 0;
+    margin-bottom: 70px;
     text-align: center;
     
     &::before {
       display: none;
+    }
+  }
+  
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 24px;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    
+    td {
+      width: 50%;
+      height: 95px;
+      vertical-align: middle;
+    }
+    td:first-child {
+      opacity: 0.3;
+      padding-right: 40px;
+    }
+    td:last-child {
+      span {
+        color: @yellow;
+      }
     }
   }
 }
