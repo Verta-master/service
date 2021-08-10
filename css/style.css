@@ -441,6 +441,7 @@ button {
 }
 .wrapper {
   width: 1260px;
+  max-width: 100%;
   margin-left: auto;
   margin-right: auto;
   padding-left: 15px;
@@ -448,7 +449,7 @@ button {
 }
 .title {
   position: relative;
-  margin-bottom: 55px;
+  margin-bottom: 48px;
   color: #21282f;
   font-size: 48px;
   font-weight: 700;
@@ -456,7 +457,7 @@ button {
 .title::before {
   content: "";
   position: absolute;
-  bottom: -30px;
+  bottom: -24px;
   left: 0;
   width: 60px;
   height: 6px;
@@ -473,7 +474,7 @@ blockquote {
   margin: 0;
   padding: 0;
   position: relative;
-  padding: 45px 35px;
+  padding: 46px 35px;
   font-size: 22px;
   font-weight: 300;
   letter-spacing: 0.01em;
@@ -486,10 +487,10 @@ blockquote {
 blockquote::before {
   content: "";
   position: absolute;
-  top: -45px;
-  left: -30px;
-  width: 96px;
-  height: 96px;
+  top: -55px;
+  left: -10px;
+  width: 87px;
+  height: 87px;
   background-image: url(../img/icons/quote.svg);
   background-repeat: no-repeat;
   background-size: contain;
@@ -497,6 +498,7 @@ blockquote::before {
 .btn {
   width: 270px;
   height: 56px;
+  max-width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -517,10 +519,22 @@ blockquote::before {
   background-image: -webkit-gradient(linear, left bottom, left top, from(#f57233), to(#febe03));
   background-image: linear-gradient(to top, #f57233 0%, #febe03 100%);
   border-radius: 8px;
+  -webkit-transition: ease-out 0.3s;
+  transition: ease-out 0.3s;
 }
 .btn:hover,
 .btn:active {
   background-image: none;
+}
+.btn--black {
+  background-color: #282c32;
+  background-image: none;
+}
+.btn--black:hover,
+.btn--black:active {
+  background-color: #febe03;
+  -webkit-transition: ease-out 0.3s;
+  transition: ease-out 0.3s;
 }
 .price {
   padding-top: 100px;
@@ -548,14 +562,16 @@ blockquote::before {
 }
 .price__info {
   width: calc(100% - 438px);
+  padding-right: 30px;
 }
 .price__info p {
   margin-bottom: 30px;
+  line-height: 1.3;
 }
 .price__btn {
   width: 317px;
   height: 75px;
-  margin-top: 40px;
+  margin-top: 44px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -585,7 +601,7 @@ blockquote::before {
 }
 .order__title {
   margin-top: 0;
-  margin-bottom: 40px;
+  margin-bottom: 37px;
   font-size: 22px;
   font-weight: 700;
   text-align: center;
@@ -595,6 +611,7 @@ blockquote::before {
 }
 .order__label {
   display: block;
+  margin-bottom: 12px;
   opacity: 0.5;
   font-size: 15px;
   font-weight: 300;
@@ -604,8 +621,13 @@ blockquote::before {
   display: block;
   width: 270px;
   max-width: 100%;
-  margin-bottom: 50px;
   border-bottom: 1px solid rgba(33, 40, 47, 0.302);
+}
+.order__field {
+  margin-bottom: 46px;
+}
+.order__field:last-of-type {
+  margin-bottom: 30px;
 }
 .order__check {
   display: none;
@@ -641,6 +663,7 @@ blockquote::before {
 }
 .person {
   margin-bottom: 150px;
+  margin-top: 96px;
 }
 .person__list {
   margin: 0;
@@ -657,7 +680,7 @@ blockquote::before {
           align-items: center;
 }
 .person__item {
-  margin-bottom: 100px;
+  margin-bottom: 126px;
 }
 .person__item:nth-child(2n) {
   -webkit-box-orient: horizontal;
@@ -737,11 +760,11 @@ blockquote::before {
   color: #ffc102;
 }
 .discount__btn {
-  margin-top: 70px;
+  margin-top: 80px;
 }
 .course {
   margin-top: 125px;
-  margin-bottom: 100px;
+  margin-bottom: 60px;
 }
 .course__wrap {
   display: -webkit-box;
@@ -765,7 +788,8 @@ blockquote::before {
 }
 .course__block {
   width: 100%;
-  padding: 45px 50px;
+  padding: 36px 50px;
+  padding-bottom: 70px;
   margin-bottom: 60px;
   border-radius: 5px;
   background-color: #ffffff;
@@ -774,7 +798,7 @@ blockquote::before {
 }
 .course__block .title {
   margin-top: 0;
-  margin-bottom: 70px;
+  margin-bottom: 40px;
   text-align: center;
 }
 .course__block .title::before {
@@ -783,14 +807,16 @@ blockquote::before {
 .course__block table {
   border-collapse: collapse;
   width: 100%;
+  max-width: 100%;
   font-size: 24px;
   font-weight: 500;
   letter-spacing: 0.01em;
 }
 .course__block table td {
   width: 50%;
-  height: 95px;
+  height: 100px;
   vertical-align: middle;
+  line-height: 1.5;
 }
 .course__block table td:first-child {
   opacity: 0.3;
@@ -800,7 +826,11 @@ blockquote::before {
   color: #ffc102;
 }
 .lessons {
-  margin-bottom: 140px;
+  margin-bottom: 135px;
+}
+.lessons .title {
+  font-size: 44px;
+  margin-bottom: 80px;
 }
 .lessons__list {
   margin: 0;
@@ -814,13 +844,14 @@ blockquote::before {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   margin-top: 110px;
+  margin-bottom: 40px;
 }
 .lessons__item {
   width: 315px;
   max-width: 100%;
-  margin-bottom: 90px;
+  margin-bottom: 102px;
   position: relative;
-  padding-top: 80px;
+  padding-top: 83px;
   font-weight: 500;
   letter-spacing: 0.01em;
   text-align: center;
@@ -856,8 +887,11 @@ blockquote::before {
 .result {
   margin-bottom: 140px;
 }
+.result .title {
+  margin-bottom: 82px;
+}
 .result__wrap {
-  margin-top: 80px;
+  margin-top: 85px;
   margin-bottom: 100px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -865,9 +899,12 @@ blockquote::before {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 .result__column {
-  width: 48%;
+  width: 44.7%;
 }
 .result__list {
   margin: 0;
@@ -897,16 +934,32 @@ blockquote::before {
 }
 .result__title {
   margin-top: 0;
-  margin-bottom: 35px;
+  margin-bottom: 20px;
   text-align: center;
   font-size: 24px;
   font-weight: 700;
   letter-spacing: 0.01em;
 }
+.result__img {
+  width: 100%;
+  margin-bottom: 85px;
+  margin-top: 80px;
+  margin-left: -70px;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
 .connect {
-  padding-top: 100px;
+  padding-top: 110px;
   padding-bottom: 100px;
   background-color: #f2fbff;
+}
+.connect .title {
+  font-weight: 500;
+  line-height: 1.14;
+  margin-bottom: 20px;
+}
+.connect .title::before {
+  display: none;
 }
 .connect__wrap {
   display: -webkit-box;
@@ -921,5 +974,143 @@ blockquote::before {
   letter-spacing: 0.01em;
 }
 .connect__text {
+  margin-top: 0;
   max-width: 650px;
+  line-height: 1.5;
+}
+@media (max-width: 1022px) {
+  .connect__wrap,
+  .result__wrap,
+  .course__wrap,
+  .discount__wrap,
+  .person__item,
+  .price__wrap {
+    display: block;
+  }
+  .connect__info,
+  .discount__info,
+  .person__info,
+  .price__info {
+    width: 100%;
+    padding-right: 0;
+    margin-bottom: 50px;
+  }
+  .discount__img,
+  .discount__btn,
+  .price__btn,
+  .order {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+  }
+  .price {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .title {
+    font-size: 40px;
+  }
+  .result__column,
+  .person__pic {
+    width: 100%;
+  }
+  .person,
+  .person__item {
+    margin-bottom: 50px;
+  }
+  .person__item:nth-child(2n) .person__info {
+    padding-left: 0;
+  }
+  .course {
+    margin-top: 50px;
+  }
+  .course__column {
+    width: 590px;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .course__column:last-of-type .course__block:nth-child(2n+1) {
+    background-color: #fff;
+  }
+  .course__column:last-of-type .course__block:nth-child(2n) {
+    background-color: rgba(242, 251, 255, 0.502);
+  }
+  .result__img {
+    display: none;
+  }
+  .connect {
+    padding-top: 50px;
+  }
+  .result__item {
+    height: auto;
+  }
+}
+@media (max-width: 766px) {
+  .price {
+    padding-top: 20px;
+  }
+  .person__pic {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 20px;
+    height: auto;
+  }
+  .person__text {
+    width: 100%;
+    padding: 0;
+    text-align: center;
+  }
+  .person__img {
+    height: 300px;
+    max-width: 100%;
+  }
+  .person__img img {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .discount__img {
+    height: auto;
+  }
+}
+@media (max-width: 480px) {
+  .lessons .title,
+  .title {
+    font-size: 30px;
+  }
+  .connect__info,
+  blockquote,
+  .subtitle {
+    font-size: 20px;
+  }
+  .course__block {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .course__block table {
+    font-size: 16px;
+  }
+  .course__block table td {
+    height: 60px;
+  }
+  .course__block table td:first-child {
+    padding-right: 10px;
+  }
+  .result__wrap,
+  .lessons__list {
+    margin-top: 50px;
+  }
+  .result,
+  .lessons,
+  .lessons__item {
+    margin-bottom: 50px;
+  }
+  .connect {
+    padding-top: 20px;
+  }
 }
