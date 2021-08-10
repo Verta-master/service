@@ -1,6 +1,7 @@
 .btn {
   width: 270px;
   height: 56px;
+  max-width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -15,9 +16,20 @@
   background-color: rgb(254,190,3);
   background-image: linear-gradient(to top, rgb(245,114,51) 0%, rgb(254,190,3) 100%);
   border-radius: 8px;
+  .transition();
   
   &:hover,
   &:active {
     background-image: none;
+  }
+}
+.btn--black {
+  background-color: rgb(40, 44, 50);
+  background-image: none;
+  
+  &:hover,
+  &:active {
+    background-color: rgb(254,190,3);
+    .transition();
   }
 }
